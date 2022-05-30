@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Random Words Generator</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,32 +22,33 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen  sm:items-center py-4 sm:pt-0">
+
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    <a href="{{ route('logout') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Logout</a>
+            </div>
+
             <form action="{{route('wordsCreate')}}"  method='POST'>
                 @csrf
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Type</label>
-                    <select  name="type" class="custom-select" id="inputGroupSelect02">
-                        <option selected>Choose...</option>
+                    <label for="characterType">Type</label>
+                    <select  name="type" class="custom-select" id="characterType">
+                        <option selected>Choose Character Type</option>
                         <option value="alphabet">Alphabet</option>
                         <option value="number">Number</option>
                         <option value="alphanumeric">AlphaNumeric</option>
                       </select>
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Character Length</label>
-                    <input type="text" name="length" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter firstname">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    <input type="text" name="length" class="form-control" placeholder="Enter character length">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Quantity</label>
-                    <input type="text" name="quantity" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter lastname">
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    <input type="text" name="quantity" class="form-control"  placeholder="Quantity">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-                <!-- </div> -->
 
             <br>
 

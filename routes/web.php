@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('loginSubmit');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', function () {
     return redirect()->route('login');
