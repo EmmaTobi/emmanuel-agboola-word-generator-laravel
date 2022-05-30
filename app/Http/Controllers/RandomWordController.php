@@ -25,8 +25,8 @@ class RandomWordController extends Controller
     {
         $data = $request->validate([
             'type' => 'required',
-            'length' => 'required',
-            'quantity' => 'required',
+            'length' => 'required|integer',
+            'quantity' => 'required|integer',
         ]);
 
         $results = $this->randomWordService->getRandomCharactersByType(

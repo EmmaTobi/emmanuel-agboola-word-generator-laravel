@@ -31,8 +31,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="characterType">Type</label>
-                    <select  name="type" class="custom-select" id="characterType">
-                        <option selected>Choose Character Type</option>
+                    <select  name="type" id="characterType">
                         <option value="alphabet">Alphabet</option>
                         <option value="number">Number</option>
                         <option value="alphanumeric">AlphaNumeric</option>
